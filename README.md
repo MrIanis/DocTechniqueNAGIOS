@@ -71,8 +71,7 @@ Téléchargez, extrayez, et installez les plugins Nagios essentiels :
 
 ```bash
 cd ~
-VER=$(curl -s https://api.github.com/repos/nagios-plugins/nagios-plugins/releases/latest|grep tag_name | cut -d '"' -f 4|sed 's/release-//')
-wget https://github.com/nagios-plugins/nagios-plugins/releases/download/release-$VER/nagios-plugins-$VER.tar.gz
+wget https://github.com/nagios-plugins/nagios-plugins/releases/download/2.4.8/nagios-plugins-2.4.8.tar.gz
 tar xvf nagios-plugins-$VER.tar.gz
 cd nagios-plugins-$VER
 ./configure --with-nagios-user=nagios --with-nagios-group=nagios
@@ -97,3 +96,4 @@ Ouvrez votre navigateur et accédez à l'interface Web Nagios en utilisant l'adr
 http://<Adresse IP/FQDN>/nagios
 
 Connectez-vous avec le nom d'utilisateur "nagiosadmin" que vous avez défini à l'étape 10.
+
